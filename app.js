@@ -8,7 +8,7 @@ const notificationElement = document.querySelector(".notification");
 const weather = {};
 
 weather.temperature = {
-    unit : "celsius"
+    unit : "fahrenheit"
 }
 
 const KELVIN = 273;
@@ -66,7 +66,7 @@ function displayWeather(){
 }
 
 // F to C conversion
-function fahrenheitToCelsius(temperature){
+function fToC(temperature){
     return ((temperature - 32)/1.8);
 }
 
@@ -75,7 +75,7 @@ tempElement.addEventListener("click", function(){
     if(weather.temperature.value === undefined) return;
     
     if(weather.temperature.unit == "celsius"){
-        let fahrenheit = fahrenheitToCelsius(weather.temperature.value);
+        let fahrenheit = fahrenheitToC(weather.temperature.value);
         fahrenheit = Math.floor(fahrenheit);
         
         tempElement.innerHTML = `${fahrenheit}°<span>C</span>`;

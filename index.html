@@ -3,12 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <title>Weather App</title>
-    <link rel="stylesheet" href="font/Rimouski.css"> <!-- link to fonts -->
     <link rel="stylesheet" href="style.css"> <!-- link for style sheet -->
 </head>
 <body>
     <div class="input">
-        <input type="text" placeholder="Search for a city..." class="search-box">
+        <input type="text" placeholder="Enter the city" class="input_text">
         <input type="submit" value="Submit" class="submit">
       </div>
       
@@ -19,9 +18,11 @@
         <div class="notification"> </div> <!-- will display any error message -->
         <div class="weather-container"> 
             
-        
+            
+            <div class="location">
+                <p>unknown</p>
+            </div>
             <div class="temperature-value">
-                
                 <p>- °<span>F</span></p>
             </div>
             <div class="weather-icon">
@@ -29,9 +30,6 @@
             </div>
             <div class="temperature-description">
                 <p> - </p>
-            </div>
-            <div class="location">
-                <p>unknown</p>
             </div>
             
             
